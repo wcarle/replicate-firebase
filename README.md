@@ -89,6 +89,9 @@ yarn deploy-functions
 
 This will deploy to firebase hosting any time the main branch is updated
 Create a service account following these instructions: https://github.com/FirebaseExtended/action-hosting-deploy/blob/main/docs/service-account.md
+
+Upload the secret value into github repository secrets
+
 Use the name `FIREBASE_SERVICE_ACCOUNT_DEPLOY` for the secret or update `.github/workflows/deploy.yml` with your service account secret name
 
 ## Run Locally
