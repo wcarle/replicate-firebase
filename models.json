@@ -1,0 +1,120 @@
+{
+  "Models": [
+    {
+      "id": "db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf",
+      "key": "stability-ai/stable-diffusion",
+      "name": "Stable Diffusion",
+      "defaults": {
+        "image_dimensions": "768x768",
+        "negative_prompt": "",
+        "num_outputs": 1,
+        "num_inference_steps": 30,
+        "guidance_scale": 7.5,
+        "scheduler": "K_EULER"
+      },
+      "output": "image/png",
+      "ext": "png",
+      "inputTransformers": [],
+      "outputTransformers": []
+    },
+    {
+      "id": "1e205ea73084bd17a0a3b43396e49ba0d6bc2e754e9283b2df49fad2dcf95755",
+      "key": "cjwbw/damo-text-to-video",
+      "name": "Damo Text To Video",
+      "defaults": {
+        "num_frames": 16,
+        "fps": 8,
+        "num_inference_steps": 50
+      },
+      "output": "video/mp4",
+      "ext": "mp4",
+      "inputTransformers": ["NumFramesTransformer"],
+      "outputTransformers": []
+    },
+    {
+      "id": "e22e77495f2fb83c34d5fae2ad8ab63c0a87b6b573b6208e1535b23b89ea66d6",
+      "key": "deforum/deforum_stable_diffusion",
+      "name": "Deforum",
+      "defaults": {
+        "max_frames": 100,
+        "zoom": "0: (1.04)",
+        "translation_x": "0: (0)",
+        "translation_y": "0: (0)",
+        "color_coherence": "Match Frame 0 LAB",
+        "sampler": "plms",
+        "fps": 15
+      },
+      "output": "video/mp4",
+      "ext": "mp4",
+      "inputTransformers": [
+        "MaxFramesTransformer",
+        "AnimationPromptsTransformer"
+      ],
+      "outputTransformers": []
+    },
+    {
+      "id": "d80e8dbe5885d570087b782ff22cef888dcc1be7941a52c8ba82c7c9d884d845",
+      "key": "wcarle/stable-diffusion-videos",
+      "name": "Stable Diffusion Videos",
+      "defaults": {
+        "scheduler": "klms",
+        "num_inference_steps": 30,
+        "guidance_scale": 7.5,
+        "num_steps": 50,
+        "fps": 20
+      },
+      "output": "video/mp4",
+      "ext": "mp4",
+      "inputTransformers": ["MultiPromptTransformer"],
+      "outputTransformers": []
+    },
+    {
+      "id": "bd5fd4290fc2ab4b6931c90aee17581a62047470422737e035f34badb8af4132",
+      "key": "wcarle/stable-diffusion-videos-openjourney",
+      "name": "Stable Diffusion Videos - Openjourney",
+      "defaults": {
+        "scheduler": "klms",
+        "num_inference_steps": 30,
+        "guidance_scale": 7.5,
+        "num_steps": 50,
+        "fps": 20
+      },
+      "output": "video/mp4",
+      "ext": "mp4",
+      "inputTransformers": ["MultiPromptTransformer"],
+      "outputTransformers": []
+    },
+    {
+      "id": "5c3d74439416de290f1d1c9b379c5364c131e69a2823c26a63f2a88fa95f3204",
+      "key": "wcarle/stable-diffusion-videos-mo-di",
+      "name": "Stable Diffusion Videos - Mo Di",
+      "defaults": {
+        "scheduler": "klms",
+        "num_inference_steps": 30,
+        "guidance_scale": 7.5,
+        "num_steps": 50,
+        "fps": 20
+      },
+      "output": "video/mp4",
+      "ext": "mp4",
+      "inputTransformers": ["MultiPromptTransformer"],
+      "outputTransformers": []
+    },
+    {
+      "id": "c0a42f58b44674d3188b9932bf2a62acab5ee4a9f2359faa8ce2bed44a67cd16",
+      "key": "wcarle/stable-diffusion-videos-ghibly",
+      "name": "Stable Diffusion Videos - Ghibly",
+      "defaults": {
+        "scheduler": "klms",
+        "num_inference_steps": 30,
+        "guidance_scale": 7.5,
+        "num_steps": 50,
+        "fps": 20
+      },
+      "output": "video/mp4",
+      "ext": "mp4",
+      "inputTransformers": ["MultiPromptTransformer"],
+      "outputTransformers": []
+    }
+  ]
+}
