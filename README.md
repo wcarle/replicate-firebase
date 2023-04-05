@@ -1,5 +1,7 @@
 # Replicate Firebase Implementation
 
+[![Release](https://github.com/wcarle/replicate-firebase/actions/workflows/deploy.yml/badge.svg)](https://github.com/wcarle/replicate-firebase/actions/workflows/deploy.yml)
+
 This is a quick start project for building AI powered web apps using Replicate and Firebase
 
 This is a NextJS/Typescript web app built to run on Firebase. It handles all interaction with Replicate APIs to process AI predictions.
