@@ -112,3 +112,62 @@ This is only required if you want to debug the Stable Diffusion integration loca
 ```sh
 yarn serve
 ```
+
+## Add a new model
+
+### Add model configuration to models.json
+
+To run any model on replicate simply add it to the `models.json` file
+For example here is the config for stable diffusion:
+
+```json
+{
+  "id": "db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf",
+  "key": "stability-ai/stable-diffusion",
+  "name": "Stable Diffusion",
+  "defaults": {
+    "image_dimensions": "768x768",
+    "negative_prompt": "",
+    "num_outputs": 1,
+    "num_inference_steps": 30,
+    "guidance_scale": 7.5,
+    "scheduler": "K_EULER"
+  },
+  "output": "image/png",
+  "ext": "png",
+  "inputTransformers": [],
+  "outputTransformers": []
+}
+```
+
+### Transforming model input and outputs
+
+What can you do with transformers?
+
+- Transform input data to fit the format of the Replicate model
+- Make some calculations before running the prediction
+- Take the outputs from the webhook response and upload them to your own storage
+
+To do that simply create a new Transformer in the `Transformers.ts` file and add the classname to the `inputTransformers` or `outputTransformers` array in the model config
+
+```ts
+/**
+ * MaxFramesTransformer
+ * Calculate the total frames of the output video based on the passed in duration and fps
+ */
+export class MaxFramesTransformer extends Transformer {
+  /**
+   * Apply the transformer to the input props
+   * @param {ModelProps} props Input props
+   * @return {Promise<ModelProps>} Transformed props
+   */
+  public async transform(props: ModelProps): Promise<ModelProps> {
+    if (props.fps && props.duration) {
+      const fps = props.fps as number;
+      const duration = props.duration as number;
+      props.max_frames = fps * duration;
+    }
+    return props;
+  }
+}
+```

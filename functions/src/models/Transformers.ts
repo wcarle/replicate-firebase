@@ -99,6 +99,7 @@ export class NumFramesTransformer extends Transformer {
 
 /**
  * MaxFramesTransformer
+ * Calculate the total frames of the output video based on the passed in duration and fps
  */
 export class MaxFramesTransformer extends Transformer {
   /**
