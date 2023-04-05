@@ -6,6 +6,12 @@ This is a NextJS/Typescript web app built to run on Firebase. It handles all int
 
 After following these setup steps you will have a fully working web app that can run virtually any AI model running on Replicate.
 
+## Try it out!
+
+https://replicate-firebase.web.app/
+
+_NOTE:_ The replicate API Key used for this demo has a monthly spend limit of $5 so if you try to run a prediction it may error out if the limit has already been reached
+
 ## Setup
 
 ### Create a Firebase project
