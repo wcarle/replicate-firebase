@@ -16,19 +16,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.4
-        with:
-          version: 7
-
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: lts/*
-          cache: 'pnpm'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: pnpm install
+        run: yarn
 
       - name: Check linting
-        run: pnpm lint
+        run: yarn lint

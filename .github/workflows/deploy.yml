@@ -2,7 +2,7 @@ name: Release
 on:
   push:
     branches:
-      - main
+      - release
 jobs:
   deploy:
     env:
@@ -17,25 +17,20 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.4
-        with:
-          version: 7
-
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: lts/*
-          cache: 'pnpm'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
 
       - name: Build website
-        run: pnpm run build
+        run: yarn build
 
       - name: Export website
-        run: pnpm run export
+        run: yarn export
 
       - name: Deploy website
         uses: FirebaseExtended/action-hosting-deploy@v0
