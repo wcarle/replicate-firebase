@@ -1,10 +1,10 @@
 {
-  "apiKey": "YOUR_API_KEY",
-  "authDomain": "YOUR_AUTH_DOMAIN",
-  "projectId": "YOUR_PROJECT_ID",
-  "storageBucket": "YOUR_STORAGE_BUCKET",
-  "messagingSenderId": "YOUR_MESSAGE_SENDER_ID",
-  "appId": "YOUR_APP_ID",
-  "measurementId": "YOUR_MEASUREMENT_ID",
-  "region": "YOUR_REGION"
+  "apiKey": "AIzaSyAde9HWxSBzXyFOvguNvQoy7o8SQw22xIU",
+  "authDomain": "replicate-firebase.firebaseapp.com",
+  "projectId": "replicate-firebase",
+  "storageBucket": "replicate-firebase.appspot.com",
+  "messagingSenderId": "471507980787",
+  "appId": "1:471507980787:web:d33f43ea89f7f024b30286",
+  "measurementId": "G-TGD8KEX6WB",
+  "region": "us-central1"
 }
