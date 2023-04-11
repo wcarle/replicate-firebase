@@ -1,5 +1,5 @@
 {
   "projects": {
-    "default": "replicate-firebase"
+    "default": "YOUR_PROJECT_ID"
   }
 }
